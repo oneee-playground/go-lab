@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/onee-only/go-data-structures/data-structure/common/kv"
-	"github.com/onee-only/go-data-structures/data-structure/non-linear/sparseset"
+	"github.com/onee-only/go-data-structures/data-structure/non-linear/set/sparseset"
 	"github.com/stretchr/testify/assert"
 )
 
