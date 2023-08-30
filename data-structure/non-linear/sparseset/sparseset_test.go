@@ -1,6 +1,7 @@
 package sparseset_test
 
 import (
+	"slices"
 	"testing"
 
 	"github.com/onee-only/go-data-structures/data-structure/common/kv"
@@ -69,16 +70,7 @@ func TestSparseSetIterator(t *testing.T) {
 		s.Add(data.Key, data.Value)
 	}
 
-	in := func(val kv.KV[string, int], list []kv.KV[string, int]) bool {
-		for _, elem := range list {
-			if elem == val {
-				return true
-			}
-		}
-		return false
-	}
-
 	for i := s.Iterator(); !i.IsEnd(); i.Next() {
-		assert.True(t, in(i.Get(), dataset))
+		assert.True(t, slices.Contains(dataset, i.Get()))
 	}
 }
