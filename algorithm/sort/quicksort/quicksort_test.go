@@ -34,3 +34,15 @@ func BenchmarkQuickSort(b *testing.B) {
 
 	quicksort.QuickSort(list)
 }
+
+func BenchmarkQuickSortWorst(b *testing.B) {
+	list := []int{}
+
+	for i := 0; i < b.N; i++ {
+		list = append(list, i)
+	}
+
+	b.ResetTimer()
+
+	quicksort.QuickSort(list)
+}
