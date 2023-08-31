@@ -22,27 +22,3 @@ func TestQuickSort(t *testing.T) {
 
 	assert.True(t, slices.IsSorted(list))
 }
-
-func BenchmarkQuickSort(b *testing.B) {
-	list := []int{}
-
-	for i := 0; i < b.N; i++ {
-		list = append(list, rand.Int())
-	}
-
-	b.ResetTimer()
-
-	quicksort.QuickSort(list)
-}
-
-func BenchmarkQuickSortWorst(b *testing.B) {
-	list := []int{}
-
-	for i := 0; i < b.N; i++ {
-		list = append(list, i)
-	}
-
-	b.ResetTimer()
-
-	quicksort.QuickSort(list)
-}

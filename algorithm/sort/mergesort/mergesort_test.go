@@ -22,15 +22,3 @@ func TestMergeSort(t *testing.T) {
 
 	assert.True(t, slices.IsSorted(list))
 }
-
-func BenchmarkMergeSort(b *testing.B) {
-	list := []int{}
-
-	for i := 0; i < b.N; i++ {
-		list = append(list, rand.Int())
-	}
-
-	b.ResetTimer()
-
-	mergesort.MergeSort(list)
-}
