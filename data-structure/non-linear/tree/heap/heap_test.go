@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/onee-only/go-data-structures/data-structure/non-linear/tree/heap"
+	"github.com/onee-only/go-lab/data-structure/non-linear/tree/heap"
 	"github.com/stretchr/testify/assert"
 )
 

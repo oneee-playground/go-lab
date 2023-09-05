@@ -5,7 +5,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/onee-only/go-data-structures/algorithm/sort/mergesort"
+	"github.com/onee-only/go-lab/algorithm/sort/mergesort"
 	"github.com/stretchr/testify/assert"
 )
 

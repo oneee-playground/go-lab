@@ -4,9 +4,9 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/onee-only/go-data-structures/algorithm/sort/binaryinsertsort"
-	"github.com/onee-only/go-data-structures/algorithm/sort/mergesort"
-	"github.com/onee-only/go-data-structures/algorithm/sort/quicksort"
+	"github.com/onee-only/go-lab/algorithm/sort/binaryinsertsort"
+	"github.com/onee-only/go-lab/algorithm/sort/mergesort"
+	"github.com/onee-only/go-lab/algorithm/sort/quicksort"
 )
 
 func unorderedList(n int) (list []int) {

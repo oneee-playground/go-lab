@@ -1,2 +1,3 @@
-# go-data-structures
-Go implementation of data structures and algorithms
+# go-lab
+
+Playing around with Go

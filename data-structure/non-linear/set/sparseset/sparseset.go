@@ -3,8 +3,8 @@ package sparseset
 import (
 	"cmp"
 
-	"github.com/onee-only/go-data-structures/data-structure/common/iterator"
-	"github.com/onee-only/go-data-structures/data-structure/common/kv"
+	"github.com/onee-only/go-lab/data-structure/common/iterator"
+	"github.com/onee-only/go-lab/data-structure/common/kv"
 )
 
 type SparseSet[TKey cmp.Ordered, TValue any] struct {
