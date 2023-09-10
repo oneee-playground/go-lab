@@ -3,26 +3,10 @@ package pipeline_test
 import (
 	"testing"
 
+	to_stream "github.com/onee-only/go-lab/pattern/concurrency/channel/common/tostream"
 	p "github.com/onee-only/go-lab/pattern/concurrency/channel/pipeline"
 	"github.com/stretchr/testify/assert"
 )
-
-func toStream[T any](done chan struct{}, values ...T) chan T {
-	stream := make(chan T)
-
-	go func() {
-		defer close(stream)
-		for _, value := range values {
-			select {
-			case <-done:
-				return
-			case stream <- value:
-			}
-		}
-	}()
-
-	return stream
-}
 
 func TestPipe(t *testing.T) {
 	add2 := func(val int) int { return val + 2 }
@@ -33,7 +17,7 @@ func TestPipe(t *testing.T) {
 
 	stream := p.Pipe(add2, done,
 		p.Pipe(add2, done,
-			p.Pipe(add2, done, toStream(done, values...)),
+			p.Pipe(add2, done, to_stream.ToStream(done, values...)),
 		),
 	)
 
