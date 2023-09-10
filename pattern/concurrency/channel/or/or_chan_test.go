@@ -1,16 +1,16 @@
-package or_chan_test
+package or_test
 
 import (
 	"testing"
 	"time"
 
-	or_chan "github.com/onee-only/go-lab/pattern/concurrency/channel/or"
+	"github.com/onee-only/go-lab/pattern/concurrency/channel/or"
 )
 
 func TestOr(t *testing.T) {
 	start := time.Now()
 
-	<-or_chan.Or(
+	<-or.Or(
 		time.After(time.Second),
 		time.After(time.Second*2),
 		time.After(time.Minute),

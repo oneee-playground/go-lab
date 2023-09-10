@@ -1,4 +1,4 @@
-package or_chan
+package or
 
 func Or[T any](chans ...<-chan T) <-chan T {
 
