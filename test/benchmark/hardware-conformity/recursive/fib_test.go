@@ -23,11 +23,11 @@ func Fib(n int, r bool) int {
 
 func BenchmarkFib20T(b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		Fib(20, true) // run the Fib function b.N times
+		Fib(20, true)
 	}
 }
 func BenchmarkFib20F(b *testing.B) {
 	for n := 0; n < b.N; n++ {
-		Fib(20, false) // run the Fib function b.N times
+		Fib(20, false)
 	}
 }
